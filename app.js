@@ -1,1 +1,16 @@
-console.log('Hello World!');
+function combine(input1, input2, resultConversion) {
+    var result;
+    if (typeof input1 === "number" && typeof input2 === "number" || resultConversion === "as-number") {
+        return result = +input1 + +input2;
+    }
+    else {
+        return result = input1.toString() + input2.toString();
+    }
+    return result;
+}
+var combinedAges = combine(30, 26, "as-number");
+console.log(combinedAges);
+var combinedStringAges = combine("30", "26", "as-number");
+console.log(combinedStringAges);
+var combinedNames = combine("Max", "Anna", "as-text");
+console.log(combinedNames);
